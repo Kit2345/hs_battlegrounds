@@ -2,3 +2,18 @@
   margin: 0;
   padding: 0;
 }
+
+.green-border {
+  border: 2px green solid;
+  width: 30%;
+}
+
+.main-content-container {
+  border: 3px red solid;
+}
+
+.searchbar-container {
+  border: 3px red solid;
+  display: flex;
+  justify-content: space-around;
+}
