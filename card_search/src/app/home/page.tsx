@@ -1,8 +1,18 @@
-import { tokenGeneration } from "../oauth/tokenGeneration";
+import { tokenGeneration } from "../api/oauth/tokenGeneration";
 
 export default async function Page() {
-  const res = await tokenGeneration();
-  console.log("Debug");
+  //works:
+  // const res = await tokenGeneration();
+
+  //Doesnt work
+  const res = await fetch("api/oauth", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({}),
+  });
+
   console.log(res);
 
   return (
